@@ -106,7 +106,7 @@ def create_sheet1(complete_data, metadata, output_dir, global_data):
         create_csv(results, output_fh)
     
         # Plot the actual sheet.
-        create_sheet1_png(metadata['name'], '{0}-{1}'.format(date.year, str(date.month).zfill(2)), 'km3/month', output_fh, output_fh.replace('.csv','.png'), template = get_path('sheet1_svg'), smart_unit = True)
+#        create_sheet1_png(metadata['name'], '{0}-{1}'.format(date.year, str(date.month).zfill(2)), 'km3/month', output_fh, output_fh.replace('.csv','.png'), template = get_path('sheet1_svg'), smart_unit = True)
     
     # Create some graphs.
     plot_storages(all_results, common_dates, metadata['name'], output_folder)
