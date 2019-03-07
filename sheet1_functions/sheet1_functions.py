@@ -355,12 +355,12 @@ def create_sheet1_png(basin, period, units, data, output, template=False , smart
 
     available_water = exploitable_water - non_uti - reserved_outflow
 
-    utilized_flow = et_u_pr + et_u_ut + et_u_mo + et_u_ma
-    utilizable_outflow = available_water - utilized_flow
+    utilized_flow = et_u_pr + et_u_ut + et_u_mo + et_u_ma 
+    utilizable_outflow = available_water - utilized_flow - basin_transfers
 
     inc_et = et_manmade + et_natural
 
-    non_cons_water = utilizable_outflow + non_uti + reserved_outflow
+    non_cons_water = utilizable_outflow + non_uti + reserved_outflow + basin_transfers
 
     non_rec_flow = et_u_pr + et_u_ut + et_u_mo + et_u_ma - inc_et - other_o
 
