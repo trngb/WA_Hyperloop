@@ -359,7 +359,10 @@ def get_hi_and_ec():
     'Peanut':[0.03, 0.3],
     'Almond':[0.03, 0.3],
     'Pepper':[0.1, 0.5],
-    'Melon':[0.8, 0.6]
+    'Melon':[0.8, 0.6],
+    'fruittrees': [0.3,0.84],
+    'vineyards': [0.22,0.75],
+    'onionsugarbeet': [0.6,0.8]
         }
     
     return HIWC
