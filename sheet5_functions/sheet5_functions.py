@@ -132,7 +132,7 @@ def create_sheet5(complete_data, metadata, output_dir, global_data):
             for inflow_sb in in_list[in_list != 0]:
                 AVAIL_sb += discharge_sum[sb_codes[inflow_sb-1]]
                 inflow += discharge_sum[sb_codes[inflow_sb-1]]
-            inflow += added_inflow[sb_code]
+#            inflow += added_inflow[sb_code]
 
             deltaS = np.zeros(len(AVAIL_sb))
             for i in np.where(AVAIL_sb < 0):
