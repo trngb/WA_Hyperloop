@@ -62,11 +62,11 @@ def create_sheet2(complete_data, metadata, output_dir):
         year = str(fh[-8:-4])
         create_sheet2_png(metadata['name'], year, 'km3/year', fh, output_fh, template = get_path('sheet2_svg'), smart_unit = True)
         
-#    for fh in monthly_csvs:
-#        output_fh = fh.replace('csv', 'png')
-#        month = str(fh[-6:-4])
-#        year = str(fh[-11:-7])
-#        create_sheet2_png(metadata['name'], '{0}-{1}'.format(year, month), 'km3/month', fh, output_fh, template = get_path('sheet2_svg'), smart_unit = True)
+    for fh in monthly_csvs:
+        output_fh = fh.replace('csv', 'png')
+        month = str(fh[-6:-4])
+        year = str(fh[-11:-7])
+        create_sheet2_png(metadata['name'], '{0}-{1}'.format(year, month), 'km3/month', fh, output_fh, template = get_path('sheet2_svg'), smart_unit = True)
         
     return complete_data
 

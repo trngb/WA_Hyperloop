@@ -132,7 +132,7 @@ def create_sheet5(complete_data, metadata, output_dir, global_data):
             for inflow_sb in in_list[in_list != 0]:
                 AVAIL_sb += discharge_sum[sb_codes[inflow_sb-1]]
                 inflow += discharge_sum[sb_codes[inflow_sb-1]]
-#            inflow += added_inflow[sb_code]
+            inflow += added_inflow[sb_code]
 
             deltaS = np.zeros(len(AVAIL_sb))
             for i in np.where(AVAIL_sb < 0):
@@ -274,8 +274,8 @@ def create_sheet5(complete_data, metadata, output_dir, global_data):
         output_fh = output_folder +"\\sheet5_monthly\\sheet5_"+datestr1+".csv"
         create_csv(results[ystr][mstr], output_fh)
         output = output_folder + '\\sheet5_monthly\\sheet5_'+datestr1+'.png'
-#        create_sheet5_svg(metadata['name'], sb_codes, datestr1, 'km3',
-#                          output_fh, output, svg_template, smart_unit=True)
+        create_sheet5_svg(metadata['name'], sb_codes, datestr1, 'km3',
+                          output_fh, output, svg_template, smart_unit=True)
         dt += 1
     fhs, dates, years, months, days = becgis.SortFiles(output_folder +"\\sheet5_monthly", [-11, -7], month_position=[-6, -4], extension='csv')
     years, counts = np.unique(years, return_counts=True)
