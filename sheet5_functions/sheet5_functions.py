@@ -467,8 +467,11 @@ def upstream_of_lu_class(dem_fh, lu_fh, output_folder, clss=63):
         os.system("gdal_translate -projwin {0} -of PCRaster {1} {2}".format(te_lu_new, dem_fh, temp_dem_fh))
         os.system("gdal_translate -projwin {0} -of PCRaster {1} {2}".format(te_lu_new, temp1_lu_fh[0], temp2_lu_fh))
 
-        dem = pcr.readmap(temp_dem_fh)
-        ldd = pcr.lddcreate(dem, 9999999, 9999999, 9999999, 9999999)
+#        dem = pcr.readmap(temp_dem_fh)
+#        ldd = pcr.lddcreate(dem, 9999999, 9999999, 9999999, 9999999)
+        demin = pcr.readmap(temp_dem_fh)
+        dem= pcr.scalar(demin)
+        ldd = pcr.lddcreate(dem, 9999999, 9999999, 9999999, 9999999)        
         lulc = pcr.nominal(pcr.readmap(temp2_lu_fh))
         waterbodies = (lulc == clss)
         catch = pcr.catchment(ldd, waterbodies)
@@ -491,7 +494,7 @@ def upstream_of_lu_class(dem_fh, lu_fh, output_folder, clss=63):
         dummy = becgis.OpenAsArray(lu_fh, nan_values=True) * 0.
         dummy = dummy.astype(np.bool)
         driver, NDV, xsize, ysize, GeoT, Projection = becgis.GetGeoInfo(lu_fh)
-        becgis.CreateGeoTiff(upstream_fh, dummy.astype(np.int8), driver, NDV, xsize, ysize, GeoT, Projection)
+        becgis.CreateGeoTiff(upstream_fh, dummy.astype(np.float64), driver, NDV, xsize, ysize, GeoT, Projection)
 
     print "Finished calculating up and downstream areas."
     return upstream_fh
