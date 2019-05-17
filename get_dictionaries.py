@@ -403,8 +403,24 @@ def get_bluegreen_classes(version = '1.0'):
     
     return gb_cats[version], mvg_avg_len[version]
     
-def get_sheet4_6_classes(version = '1.0'):
+def get_sheet4_6_classes(version = 'litani_1'):
     lucs = dict()
+
+    lucs['litani_1'] = {
+    'Forests':              [1, 8, 9, 10, 11, 17],
+    'Shrubland':            [2, 12, 14, 15],
+    'Rainfed Crops':        [34, 35, 36, 37, 38, 39, 40, 41, 42, 43],
+    'Forest Plantations':   [33, 44],
+    'Natural Water Bodies': [4,19,23,24],
+    'Wetlands':             [5, 25, 30, 31],
+    'Natural Grasslands':   [3, 13, 16, 20],
+    'Other (Non-Manmade)':  [6, 7, 18, 21, 22, 26, 27, 28, 29, 32, 45, 46, 47,48, 49, 50, 51,4, 19, 23, 24],
+    'Irrigated crops':      [52,53,54,55,56,57,58,59,60,61,62],
+    'Managed water bodies': [63],
+    'Aquaculture':          [65],
+    'Residential':          [66, 68, 72],
+    'Greenhouses':          [64],
+    'Other':                [68,69,70,71,76,78,74,75,77]}
     
     lucs['1.0'] = {
     'Forests':              [1, 8, 9, 10, 11, 17],
