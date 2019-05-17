@@ -247,7 +247,7 @@ def create_sheet4_6(complete_data, metadata, output_dir, global_data):
         demand_tif = calc_demand(complete_data['lai'][0][complete_data['lai'][1] == date][0], complete_data['etref'][0][complete_data['etref'][1] == date][0], complete_data['p'][0][complete_data['p'][1] == date][0], metadata['lu'], date, os.path.join(output_dir, 'data'))
         if "population_tif" in global_data.keys():
             population_tif = global_data["population_tif"]
-            residential_demand = include_residential_supply(population_tif, metadata['lu'], total_supply_tif, date, lucs, 110, wcpc_minimal = 100)
+            residential_demand = include_residential_supply(population_tif, metadata['lu'], total_supply_tif, date, lucs, 220, wcpc_minimal = 100)
             becgis.set_classes_to_value(demand_tif, metadata['lu'], lucs['Residential'], value = residential_demand)
 
         ###
