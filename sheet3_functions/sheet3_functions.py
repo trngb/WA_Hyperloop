@@ -44,8 +44,25 @@ def create_sheet3(complete_data, metadata, output_dir):
             else:
                 wp_y_rainfed_dictionary[crop[2]][crop[3]] = result
             years[crop[4]] = [date.year for date in read_csv(result)[0]][1:]
-        else:
-            print "skipping crop with lu-class {0}, not on LU-map".format(crop[4])
+        else:  #multiple-crop class          
+#            print "skipping crop with lu-class {0}, not on LU-map".format(crop[4])            
+            cropmask_fh=crop[4]
+            crop=int(os.path.split(cropmask_fh)[-1].split('.')[0])
+            start_dates, end_dates = import_growing_seasons(crop[0])
+            WP_Y_Yearly_csvs_list=[]
+            for subcrop in crop[1]:            
+                result_seasonly = calc_Y_WP_seasons(start_dates, end_dates, cropmask_fh, subcrop, crop[1][subcrop], complete_data['etg'][0], complete_data['etg'][1], complete_data['etb'][0], complete_data['etb'][1], complete_data['ndm'][0], complete_data['ndm'][1], complete_data['p'][0], complete_data['p'][1], os.path.join(output_dir, 'WP_Y_Seasonly_csvs'), HIWC_dict, ab = (1.0,0.9))
+                result = calc_Y_WP_year(result_seasonly, os.path.join(output_dir, 'WP_Y_Yearly_csvs'), crop[1][subcrop]) 
+                plot_Y_WP(result, os.path.join(output_dir,'WP_Y_Yearly_graphs'), croptype = crop[1][subcrop], catchment_name = metadata['name'], filetype = 'png')
+                plot_Y_WP(result_seasonly, os.path.join(output_dir,'WP_Y_Seasonly_graphs'), croptype = crop[1][subcrop], catchment_name = metadata['name'], filetype = 'png')
+                WP_Y_Yearly_csvs_list.append(result)
+            #saverage yield and sum consumption of all subcrops
+            finalresult= summarize_subcrops(WP_Y_Yearly_csvs_list,os.path.join(output_dir, 'WP_Y_Yearly_csvs'),crop)
+            if crop>50:
+                wp_y_irrigated_dictionary[crop[2]][crop[3]] = finalresult
+            else:
+                wp_y_rainfed_dictionary[crop[2]][crop[3]] = finalresult
+            years[crop[4]] = [date.year for date in read_csv(result)[0]][1:]
             continue
     
     if metadata['non_crop'] is not None:
@@ -2173,3 +2190,13 @@ def create_sheet3_png(basin, period, units, data, output, template=False):
     os.remove(tempout_path)
 
     return output
+
+def summarize_subcrops(WP_Y_Yearly_csvs_list,output_dir,crop_subclass):
+    '''
+    for each LUWA sub-class that contain several sub-crops
+    csv was computed for each sub-crop
+    then summarize to the same sub-class
+    '''
+    csv_filename = os.path.join(output_dir, 'Yearly_Yields_WPs_{0}.csv'.format(crop_subclass))
+    
+    return csv_filename
