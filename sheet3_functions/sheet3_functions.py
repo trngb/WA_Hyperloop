@@ -246,7 +246,7 @@ def calc_Y_WP_year(csv_fh, output_dir, croptype,lu_class):
     
     years = np.unique(np.array([date.year for date in np.append(start_dates, end_dates)]))
     
-    csv_filename = os.path.join(output_dir, 'Yearly_Yields_WPs_{0}.csv'.format(lu_class))
+    csv_filename = os.path.join(output_dir, 'Yearly_Yields_WPs_{0}_{1}.csv'.format(lu_class,croptype))
     csv_file = open(csv_filename, 'wb')
     writer = csv.writer(csv_file, delimiter=';')
     writer.writerow(["Startdate", "Enddate", "Yield [kg/ha]", "Yield_pr [kg/ha]", "Yield_irr [kg/ha]", "WP [kg/m3]", "WP_blue [kg/m3]", "WP_green [kg/m3]", "WC [km3]", "WC_blue [km3]", "WC_green [km3]"])
@@ -433,7 +433,7 @@ def calc_Y_WP_seasons(start_dates, end_dates, lu_fh, lu_class, croptype, etgreen
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)    
     
-    csv_filename = os.path.join(output_dir, 'Yields_WPs_{0}.csv'.format(lu_class))
+    csv_filename = os.path.join(output_dir, 'Yields_WPs_{0}_{1}.csv'.format(lu_class,croptype))
     csv_file = open(csv_filename, 'wb')
     writer = csv.writer(csv_file, delimiter=';')
     
@@ -2206,6 +2206,6 @@ def summarize_subcrops(WP_Y_Yearly_csvs_list,output_dir,crop_subclass):
     summary['WC [km3]']=summary['WC [km3]']*n
     summary['WC_blue [km3]']=summary['WC_blue [km3]']*n
     summary['WC_green [km3]']=summary['WC_green [km3]']*n
-    csv_filename = os.path.join(output_dir, 'Yearly_Yields_WPs_{0}.csv'.format(crop_subclass))
+    csv_filename = os.path.join(output_dir, 'Yearly_Yields_WPs_{0}_AllCrops.csv'.format(crop_subclass))
     summary.to_csv(csv_filename,sep=';',na_rep='nan')
     return csv_filename
