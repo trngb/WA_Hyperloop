@@ -2197,6 +2197,15 @@ def summarize_subcrops(WP_Y_Yearly_csvs_list,output_dir,crop_subclass):
     csv was computed for each sub-crop
     then summarize to the same sub-class
     '''
+    summary=0
+    n=len(WP_Y_Yearly_csvs_list)
+    for csvf in WP_Y_Yearly_csvs_list:
+        df=pd.read_csv(csvf,sep=';',index_col=(0,1),na_values='nan')
+        summary+=df
+    summary=summary/n
+    summary['WC [km3]']=summary['WC [km3]']*n
+    summary['WC_blue [km3]']=summary['WC_blue [km3]']*n
+    summary['WC_green [km3]']=summary['WC_green [km3]']*n
     csv_filename = os.path.join(output_dir, 'Yearly_Yields_WPs_{0}.csv'.format(crop_subclass))
-    
+    summary.to_csv(csv_filename,sep=';',na_rep='nan')
     return csv_filename
