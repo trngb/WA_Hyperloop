@@ -36,7 +36,7 @@ def create_sheet3(complete_data, metadata, output_dir):
         if crop[4] in LULC:
             start_dates, end_dates = import_growing_seasons(crop[0])
             result_seasonly = calc_Y_WP_seasons(start_dates, end_dates, metadata['lu'], crop[4], crop[1], complete_data['etg'][0], complete_data['etg'][1], complete_data['etb'][0], complete_data['etb'][1], complete_data['ndm'][0], complete_data['ndm'][1], complete_data['p'][0], complete_data['p'][1], os.path.join(output_dir, 'WP_Y_Seasonly_csvs'), HIWC_dict, ab = (1.0,0.9))
-            result = calc_Y_WP_year(result_seasonly, os.path.join(output_dir, 'WP_Y_Yearly_csvs'), crop[1])
+            result = calc_Y_WP_year(result_seasonly, os.path.join(output_dir, 'WP_Y_Yearly_csvs'), crop[1],crop[4])
             plot_Y_WP(result, os.path.join(output_dir,'WP_Y_Yearly_graphs'), croptype = crop[1], catchment_name = metadata['name'], filetype = 'png')
             plot_Y_WP(result_seasonly, os.path.join(output_dir,'WP_Y_Seasonly_graphs'), croptype = crop[1], catchment_name = metadata['name'], filetype = 'png')
             if crop[4] > 50:
@@ -52,7 +52,7 @@ def create_sheet3(complete_data, metadata, output_dir):
             WP_Y_Yearly_csvs_list=[]
             for subcrop in crop[1]:            
                 result_seasonly = calc_Y_WP_seasons(start_dates, end_dates, cropmask_fh, subcrop, crop[1][subcrop], complete_data['etg'][0], complete_data['etg'][1], complete_data['etb'][0], complete_data['etb'][1], complete_data['ndm'][0], complete_data['ndm'][1], complete_data['p'][0], complete_data['p'][1], os.path.join(output_dir, 'WP_Y_Seasonly_csvs'), HIWC_dict, ab = (1.0,0.9))
-                result = calc_Y_WP_year(result_seasonly, os.path.join(output_dir, 'WP_Y_Yearly_csvs'), crop[1][subcrop]) 
+                result = calc_Y_WP_year(result_seasonly, os.path.join(output_dir, 'WP_Y_Yearly_csvs'), crop[1][subcrop],crop) 
                 plot_Y_WP(result, os.path.join(output_dir,'WP_Y_Yearly_graphs'), croptype = crop[1][subcrop], catchment_name = metadata['name'], filetype = 'png')
                 plot_Y_WP(result_seasonly, os.path.join(output_dir,'WP_Y_Seasonly_graphs'), croptype = crop[1][subcrop], catchment_name = metadata['name'], filetype = 'png')
                 WP_Y_Yearly_csvs_list.append(result)
@@ -220,7 +220,7 @@ def create_sheet3_csv(wp_y_irrigated_dictionary, wp_y_rainfed_dictionary, wp_y_n
     return output_csv_fh_a, output_csv_fh_b
 
     
-def calc_Y_WP_year(csv_fh, output_dir, croptype):
+def calc_Y_WP_year(csv_fh, output_dir, croptype,lu_class):
     """
     Calculate yearly Yields and Water Productivities from seasonal values (created with calc_Y_WP_seasons) and store
     results in a csv-file.
@@ -246,7 +246,7 @@ def calc_Y_WP_year(csv_fh, output_dir, croptype):
     
     years = np.unique(np.array([date.year for date in np.append(start_dates, end_dates)]))
     
-    csv_filename = os.path.join(output_dir, 'Yearly_Yields_WPs_{0}.csv'.format(croptype))
+    csv_filename = os.path.join(output_dir, 'Yearly_Yields_WPs_{0}.csv'.format(lu_class))
     csv_file = open(csv_filename, 'wb')
     writer = csv.writer(csv_file, delimiter=';')
     writer.writerow(["Startdate", "Enddate", "Yield [kg/ha]", "Yield_pr [kg/ha]", "Yield_irr [kg/ha]", "WP [kg/m3]", "WP_blue [kg/m3]", "WP_green [kg/m3]", "WC [km3]", "WC_blue [km3]", "WC_green [km3]"])
@@ -433,7 +433,7 @@ def calc_Y_WP_seasons(start_dates, end_dates, lu_fh, lu_class, croptype, etgreen
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)    
     
-    csv_filename = os.path.join(output_dir, 'Yields_WPs_{0}.csv'.format(croptype))
+    csv_filename = os.path.join(output_dir, 'Yields_WPs_{0}.csv'.format(lu_class))
     csv_file = open(csv_filename, 'wb')
     writer = csv.writer(csv_file, delimiter=';')
     
