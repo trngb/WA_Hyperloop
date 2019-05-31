@@ -266,9 +266,8 @@ def create_sheet4_6(complete_data, metadata, output_dir, global_data):
         
         sheet4_csv =create_sheet4_csv(entries_sh4, metadata['lu'], lucs, date, os.path.join(output_dir2, 'sheet4_monthly'), convert_unit = 1)
         
-        create_sheet4(metadata['name'], '{0}-{1}'.format(date.year, str(date.month).zfill(2)), ['km3/month', 'km3/month'], [sheet4_csv, sheet4_csv], 
-                          [sheet4_csv.replace('.csv','_a.png'), sheet4_csv.replace('.csv','_b.png')], template = [get_path('sheet4_1_svg'), get_path('sheet4_2_svg')], smart_unit = True)
-        
+#        create_sheet4(metadata['name'], '{0}-{1}'.format(date.year, str(date.month).zfill(2)), ['km3/month', 'km3/month'], [sheet4_csv, sheet4_csv], 
+#                          [sheet4_csv.replace('.csv','_a.png'), sheet4_csv.replace('.csv','_b.png')], template = [get_path('sheet4_1_svg'), get_path('sheet4_2_svg')], smart_unit = True)
         return_flow_sw_sw = np.append(return_flow_sw_sw, return_flow_sw_sw_tif)
         return_flow_sw_gw = np.append(return_flow_sw_gw, return_flow_sw_gw_tif)
         return_flow_gw_sw = np.append(return_flow_gw_sw, return_flow_gw_sw_tif)
@@ -294,7 +293,7 @@ def create_sheet4_6(complete_data, metadata, output_dir, global_data):
     
         sheet6_csv = create_sheet6_csv(entries_sh6, entries_2_sh6, metadata['lu'], lucs, date, os.path.join(output_dir3,'sheet6_monthly'), convert_unit = 1)
         
-        create_sheet6(metadata['name'], '{0}-{1}'.format(date.year, str(date.month).zfill(2)), 'km3/month', sheet6_csv, sheet6_csv.replace('.csv', '.png'), template = get_path('sheet6_svg'), smart_unit = True)
+#        create_sheet6(metadata['name'], '{0}-{1}'.format(date.year, str(date.month).zfill(2)), 'km3/month', sheet6_csv, sheet6_csv.replace('.csv', '.png'), template = get_path('sheet6_svg'), smart_unit = True)
         
         print "sheet 6 finished"
         

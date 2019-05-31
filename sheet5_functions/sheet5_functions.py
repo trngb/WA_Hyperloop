@@ -274,8 +274,8 @@ def create_sheet5(complete_data, metadata, output_dir, global_data):
         output_fh = output_folder +"\\sheet5_monthly\\sheet5_"+datestr1+".csv"
         create_csv(results[ystr][mstr], output_fh)
         output = output_folder + '\\sheet5_monthly\\sheet5_'+datestr1+'.png'
-        create_sheet5_svg(metadata['name'], sb_codes, datestr1, 'km3',
-                          output_fh, output, svg_template, smart_unit=True)
+#        create_sheet5_svg(metadata['name'], sb_codes, datestr1, 'km3',
+#                          output_fh, output, svg_template, smart_unit=True)
         dt += 1
     fhs, dates, years, months, days = becgis.SortFiles(output_folder +"\\sheet5_monthly", [-11, -7], month_position=[-6, -4], extension='csv')
     years, counts = np.unique(years, return_counts=True)
