@@ -12,7 +12,7 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg3336"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.1 r15371"
    xml:space="preserve"
    width="1355.4375"
    height="1027.5601"
@@ -26,16 +26,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="944"
-     inkscape:window-height="1002"
+     inkscape:window-width="1858"
+     inkscape:window-height="1058"
      id="namedview3338"
      showgrid="false"
-     inkscape:zoom="2.7858164"
-     inkscape:cx="244.82113"
-     inkscape:cy="784.2919"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:zoom="0.6964541"
+     inkscape:cx="503.56739"
+     inkscape:cy="292.40935"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
      inkscape:current-layer="g3344" /><metadata
      id="metadata3342"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
@@ -631,20 +631,20 @@
        transform="scale(1,-1)"
        style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="beneficial"
-       x="933.01782"
-       y="-348.53809"><tspan
-         x="933.01782"
-         y="-348.53809"
+       x="938.18689"
+       y="-273.2998"><tspan
+         x="938.18689"
+         y="-273.2998"
          sodipodi:role="line"
          id="tspan3904">NaN</tspan></text>
 <text
        transform="scale(1,-1)"
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#4b7774;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="environment"
-       x="939.6236"
-       y="-266.61621"><tspan
-         x="939.6236"
-         y="-266.61621"
+       x="944.21832"
+       y="-219.64441"><tspan
+         x="944.21832"
+         y="-219.64441"
          sodipodi:role="line"
          id="tspan3908">NaN</tspan></text>
 <text
@@ -782,53 +782,53 @@
          sodipodi:role="line"
          id="tspan3848">Other</tspan></text>
 <text
-       y="-204.53014"
-       x="889.44037"
-       transform="scale(0.94868327,-1.0540926)"
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.33288288px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       y="-159.96878"
+       x="894.28363"
+       transform="scale(0.94868326,-1.0540926)"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.33288288px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#4b7774;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="text3762"><tspan
-         x="889.44037"
-         y="-204.53014"
+         x="894.28363"
+         y="-159.96878"
          sodipodi:role="line"
          id="tspan3764">Leisure</tspan></text>
 <text
-       y="-220.66156"
-       x="889.44037"
-       transform="scale(0.94868327,-1.0540926)"
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.33288288px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       y="-176.1002"
+       x="894.28363"
+       transform="scale(0.94868326,-1.0540926)"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.33288288px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#4b7774;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="text6552"><tspan
-         x="889.44037"
-         y="-220.66156"
+         x="894.28363"
+         y="-176.1002"
          sodipodi:role="line"
          id="tspan3766">Energy</tspan></text>
 <text
-       y="-236.79297"
-       x="889.44037"
-       transform="scale(0.94868327,-1.0540926)"
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.33288288px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       y="-192.23161"
+       x="894.28363"
+       transform="scale(0.94868326,-1.0540926)"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.33288288px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#4b7774;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="text6555"><tspan
-         x="889.44037"
-         y="-236.79297"
+         x="894.28363"
+         y="-192.23161"
          sodipodi:role="line"
          id="tspan3768">Economy</tspan></text>
 <text
-       y="-252.92438"
-       x="889.44037"
-       transform="scale(0.94868327,-1.0540926)"
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.33288288px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       y="-208.36302"
+       x="894.28363"
+       transform="scale(0.94868326,-1.0540926)"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.33288288px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#4b7774;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="text6558"><tspan
-         x="889.44037"
-         y="-252.92438"
+         x="894.28363"
+         y="-208.36302"
          sodipodi:role="line"
          id="tspan3770">Environment</tspan></text>
 <text
-       y="-269.06812"
-       x="889.44037"
-       transform="scale(0.94868327,-1.0540926)"
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.33288288px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       y="-224.50676"
+       x="894.28363"
+       transform="scale(0.94868326,-1.0540926)"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.33288288px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#4b7774;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="text6561"><tspan
-         x="889.44037"
-         y="-269.06812"
+         x="894.28363"
+         y="-224.50676"
          sodipodi:role="line"
          id="tspan3772">Agriculture</tspan></text>
 <text
@@ -1305,23 +1305,23 @@
          sodipodi:role="line"
          id="tspan3980">NaN</tspan></text>
 <text
-       y="-232.60159"
-       x="939.6236"
+       y="-185.62979"
+       x="944.21832"
        transform="scale(1,-1)"
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#4b7774;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="energy"><tspan
-         x="939.6236"
-         y="-232.60159"
+         x="944.21832"
+         y="-185.62979"
          sodipodi:role="line"
          id="tspan3946">NaN</tspan></text>
 <text
-       y="-215.5976"
-       x="939.6236"
+       y="-168.62579"
+       x="944.21832"
        transform="scale(1,-1)"
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#4b7774;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="leisure"><tspan
-         x="939.6236"
-         y="-215.5976"
+         x="944.21832"
+         y="-168.62579"
          sodipodi:role="line"
          id="tspan3948">NaN</tspan></text>
 <text
@@ -1446,23 +1446,23 @@
          sodipodi:role="line"
          id="tspan3972">NaN</tspan></text>
 <text
-       y="-249.61861"
-       x="939.6236"
+       y="-202.6468"
+       x="944.21832"
        transform="scale(1,-1)"
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#4b7774;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="economy"><tspan
-         x="939.6236"
-         y="-249.61861"
+         x="944.21832"
+         y="-202.6468"
          sodipodi:role="line"
          id="tspan3974">NaN</tspan></text>
 <text
        transform="scale(1,-1)"
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#4b7774;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="agriculture"
-       x="939.62408"
-       y="-283.62701"><tspan
-         x="939.62408"
-         y="-283.62701"
+       x="944.21881"
+       y="-236.65521"><tspan
+         x="944.21881"
+         y="-236.65521"
          sodipodi:role="line"
          id="tspan3920">NaN</tspan></text>
 <text
@@ -1969,13 +1969,13 @@
          y="-671.11072"
          x="133.59541">Period: NaN</tspan></text>
 <text
-       x="840.39764"
+       x="845.56671"
        style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="text3754-0"
-       y="-348.53809"
+       y="-273.2998"
        transform="scale(1,-1)"><tspan
-         x="840.39764"
+         x="845.56671"
          sodipodi:role="line"
-         y="-348.53809"
+         y="-273.2998"
          id="tspan3809-6">Beneficial</tspan></text>
 </g></svg>
