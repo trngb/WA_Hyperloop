@@ -8529,8 +8529,8 @@
      showgrid="false"
      showguides="false"
      inkscape:current-layer="layer1"
-     inkscape:cx="562.37577"
-     inkscape:cy="268.15157"
+     inkscape:cx="445.54053"
+     inkscape:cy="406.50113"
      inkscape:document-units="mm"
      inkscape:measure-end="0,0"
      inkscape:measure-start="0,0"
@@ -8538,10 +8538,10 @@
      inkscape:pageshadow="2"
      inkscape:window-height="1058"
      inkscape:window-maximized="1"
-     inkscape:window-width="1857"
+     inkscape:window-width="1858"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:zoom="0.70710678">
+     inkscape:zoom="2.8284271">
     <inkscape:grid
        id="grid35420"
        type="xygrid" />
@@ -11175,10 +11175,10 @@
        inkscape:connector-curvature="0" />
     <path
        clip-path="url(#clipEmfPath1-6)"
-       d="M 66.645669,185.27496 H 1467.5376 V 187.94079 H 66.645669 Z"
+       d="M 66.645669,185.27496 H 1467.5376 v 2.66583 H 66.645669 Z"
        id="path32919"
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.01962423px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       transform="matrix(0.16831502,0,0,0.18116108,10.888564,141.27181)"
+       transform="matrix(0.16831502,0,0,0.18116108,10.888564,141.80098)"
        inkscape:connector-curvature="0" />
     <path
        clip-path="url(#clipEmfPath1-6)"
