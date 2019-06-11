@@ -805,7 +805,7 @@ def create_sheet5_svg(basin, sb_codes, period, units, data, output, template=Fal
     out_png = output
     subprocess.call([get_path('inkscape'), tempout_path,
                      '--export-dpi=300', '--export-png='+out_png])
-    os.remove(tempout_path)
+#    os.remove(tempout_path)
     return
 
 class Vividict(dict):
