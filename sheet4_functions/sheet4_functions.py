@@ -246,6 +246,7 @@ def create_sheet4_6(complete_data, metadata, output_dir, global_data):
         ###
         demand_tif = calc_demand(complete_data['lai'][0][complete_data['lai'][1] == date][0], complete_data['etref'][0][complete_data['etref'][1] == date][0], complete_data['p'][0][complete_data['p'][1] == date][0], metadata['lu'], date, os.path.join(output_dir, 'data'))
         if "population_tif" in global_data.keys():
+            print('True')
             population_tif = global_data["population_tif"]
             residential_demand = include_residential_supply(population_tif, metadata['lu'], total_supply_tif, date, lucs, 220, wcpc_minimal = 100)
             becgis.set_classes_to_value(demand_tif, metadata['lu'], lucs['Residential'], value = residential_demand)
@@ -1492,13 +1493,13 @@ def create_sheet4(basin, period, units, data, output, template=False, margin = 0
         tempout_path = output[0].replace('.png', '_temporary.svg')
         tree1.write(tempout_path)
         subprocess.call([get_path('inkscape'),tempout_path,'--export-png='+output[0], '-d 300'])
-        os.remove(tempout_path)
+#        os.remove(tempout_path)
         
     if data[1] is not None:
         tempout_path = output[1].replace('.png', '_temporary.svg')
         tree2.write(tempout_path)
         subprocess.call([get_path('inkscape'),tempout_path,'--export-png='+output[1], '-d 300'])
-        os.remove(tempout_path)
+#        os.remove(tempout_path)
 
 def fractions(lu_fh, fractions, lucs, output_folder, filename = 'fractions.tif'):
     """
@@ -1841,7 +1842,7 @@ def create_sheet6(basin, period, unit, data, output, template=False, decimal = 1
     
     subprocess.call([get_path('inkscape'),tempout_path,'--export-png='+output, '-d 300'])
     
-    os.remove(tempout_path)
+#    os.remove(tempout_path)
 
 def plot_storages(ds_ts, bf_ts, cr_ts, vgw_ts, vr_ts, rfg_ts, rfs_ts, dates, output_folder, catchment_name, extension = 'png'):
     
